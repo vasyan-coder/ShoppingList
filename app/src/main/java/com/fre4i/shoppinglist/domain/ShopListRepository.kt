@@ -2,11 +2,11 @@ package com.fre4i.shoppinglist.domain
 
 interface ShopListRepository {
 
-    fun addShopItemUseCase(shopItem: ShopItem)
+    fun addShopItem(shopItem: ShopItem)
 
-    fun deleteShopItemUseCase(shopItem: ShopItem)
+    fun deleteShopItem(shopItem: ShopItem)
 
-    fun editShopItemUseCase(shopItem: ShopItem)
+    fun editShopItem(shopItem: ShopItem)
 
     fun getShopItem(showItemId: Int): ShopItem
 
