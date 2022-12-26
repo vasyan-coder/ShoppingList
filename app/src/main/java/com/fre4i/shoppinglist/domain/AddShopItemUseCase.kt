@@ -2,6 +2,6 @@ package com.fre4i.shoppinglist.domain
 
 class AddShopItemUseCase(private val shopListRepository: ShopListRepository) {
     fun addShopItem(shopItem: ShopItem) {
-        shopListRepository.addShopItemUseCase(shopItem)
+        shopListRepository.addShopItem(shopItem)
     }
 }
