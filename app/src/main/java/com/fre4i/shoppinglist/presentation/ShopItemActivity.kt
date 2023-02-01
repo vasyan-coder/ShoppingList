@@ -8,7 +8,7 @@ import com.fre4i.shoppinglist.R
 import com.fre4i.shoppinglist.domain.ShopItem
 import com.fre4i.shoppinglist.domain.ShopItem.Companion.UNDEFINED_ID
 
-class ShopItemActivity : AppCompatActivity() {
+class ShopItemActivity : AppCompatActivity(), ShopItemFragment.OnEditingFinishedListener {
 
     private var screenMode = MODE_UNKNOWN
     private var shopItemId = ShopItem.UNDEFINED_ID
@@ -71,5 +71,9 @@ class ShopItemActivity : AppCompatActivity() {
             intent.putExtra(EXTRA_SHOP_ITEM_ID, shopItemId)
             return intent
         }
+    }
+
+    override fun onEditingFinished() {
+        finish()
     }
 }
